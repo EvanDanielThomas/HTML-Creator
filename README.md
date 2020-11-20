@@ -11,7 +11,7 @@ Please credit and link back to this repository if you use this in one of your pr
 
 
 ✨Bugs✨
-- Program repeats itself after first creation, second time it works as normal.
+- ~~Program repeats itself after first creation, second time it works as normal.~~ I'm a clown and I didn't realize the code is literally pasted there twice 🤦🏾‍♂️
 - Program copies a blank message to clipboard, user needs to copy/paste manually
 
 💫Goals💫
