@@ -11,7 +11,7 @@ while headingconfirmation != True:
 #Configuring the second element
 secondelementconfirmed = False
 while secondelementconfirmed != True:
-    secondelement = input("What would you like next in your program?  A lower-level heading or a paragraph? (H/P): ")
+    secondelement = input("What would you like next in your website?  A sub-heading or a paragraph? (H/P): ")
     if secondelement == "P":
         secondelement = "paragraph"
         secondcontent = input("What would you like your paragraph to say?  Please only insert one paragraph. ")
@@ -25,16 +25,42 @@ while secondelementconfirmed != True:
                 secondcontent = input("What would you like your paragraph to say? ")
     elif secondelement == "H":
         secondelement = "heading"
-        secondcontent = input("What would you like your secondary heading to say?  Only one line of text supported. ")
+        secondcontent = input("What would you like your sub-heading to say?  Only one line of text supported. ")
         secondconfirmation = False
         while secondconfirmation != True:
-            secondconfirmation = input("Are you okay with " + secondcontent + " as your secondary heading?  (Y/N): ")
+            secondconfirmation = input("Are you okay with " + secondcontent + " as your sub-heading?  (Y/N): ")
             if secondconfirmation == "Y":
                 secondconfirmation = True
                 secondelementconfirmed = True
             elif secondconfirmation == "N":
-                secondcontent = input("What would you like your secondary heading to say? Only one line of text is supported. ")
+                secondcontent = input("What would you like your sub-heading to say? Only one line of text is supported. ")
 
+#Configuring the third element
+thirdelementconfirmed = False
+while thirdelementconfirmed != True:
+    thirdelement = input("What would you like next in your website?  A sub-heading or a paragraph? (H/P): ")
+    if thirdelement == "P":
+        thirdelement = "paragraph"
+        thirdcontent = input("What would you like your paragraph to say?  Please only insert one paragraph. ")
+        thirdconfirmation = False
+        while thirdconfirmation != True:
+            thirdconfirmation = input("Are you okay with " + thirdcontent + " as your paragraph?  (Y/N): ")
+            if thirdconfirmation == "Y":
+                thirdconfirmation = True
+                thirdelementconfirmed = True
+            elif thirdconfirmation == "N":
+                thirdcontent = input("What would you like your paragraph to say? ")
+    elif thirdelement == "H":
+        thirdelement = "heading"
+        thirdcontent = input("What would you like your sub-heading to say?  Only one line of text supported. ")
+        thirdconfirmation = False
+        while thirdconfirmation != True:
+            thirdconfirmation = input("Are you okay with " + secondcontent + " as your sub-heading?  (Y/N): ")
+            if thirdconfirmation == "Y":
+                thirdconfirmation = True
+                thirdelementconfirmed = True
+            elif thirdconfirmation == "N":
+                thirdcontent = input("What would you like your sub-heading to say? Only one line of text is supported. ")
 
 
 
@@ -43,4 +69,9 @@ print("<h1>" + heading + "</h1>")
 if secondelement == "paragraph":
     print("<p>" + secondcontent + "</p>")
 elif secondelement == "heading":
+    print("<h2>" + secondcontent + "</h2>")
+
+if thirdelement == "paragraph":
+    print("<p>" + secondcontent + "</p>")
+elif thirdelement == "heading":
     print("<h2>" + secondcontent + "</h2>")
