@@ -1,3 +1,6 @@
+import pyperclip as pc
+#pyperclip module necessary for copy/paste function
+
 #Main Heading
 heading = input("What would you like the heading of your website to be? ")
 headingconfirmation = False
@@ -8,70 +11,50 @@ while headingconfirmation != True:
     elif headingconfirmation == "N":
         heading = input("What would you like the heading of your website to be?  ")
 
-#Configuring the second element
-secondelementconfirmed = False
-while secondelementconfirmed != True:
-    secondelement = input("What would you like next in your website?  A sub-heading or a paragraph? (H/P): ")
-    if secondelement == "P":
-        secondelement = "paragraph"
-        secondcontent = input("What would you like your paragraph to say?  Please only insert one paragraph. ")
-        secondconfirmation = False
-        while secondconfirmation != True:
-            secondconfirmation = input("Are you okay with " + secondcontent + " as your paragraph?  (Y/N): ")
-            if secondconfirmation == "Y":
-                secondconfirmation = True
-                secondelementconfirmed = True
-            elif secondconfirmation == "N":
-                secondcontent = input("What would you like your paragraph to say? ")
-    elif secondelement == "H":
-        secondelement = "heading"
-        secondcontent = input("What would you like your sub-heading to say?  Only one line of text supported. ")
-        secondconfirmation = False
-        while secondconfirmation != True:
-            secondconfirmation = input("Are you okay with " + secondcontent + " as your sub-heading?  (Y/N): ")
-            if secondconfirmation == "Y":
-                secondconfirmation = True
-                secondelementconfirmed = True
-            elif secondconfirmation == "N":
-                secondcontent = input("What would you like your sub-heading to say? Only one line of text is supported. ")
+finalcode = ("<h1>" + heading + "</h1>" + "\n")
+x = 1
 
-#Configuring the third element
-thirdelementconfirmed = False
-while thirdelementconfirmed != True:
-    thirdelement = input("What would you like next in your website?  A sub-heading or a paragraph? (H/P): ")
-    if thirdelement == "P":
-        thirdelement = "paragraph"
-        thirdcontent = input("What would you like your paragraph to say?  Please only insert one paragraph. ")
-        thirdconfirmation = False
-        while thirdconfirmation != True:
-            thirdconfirmation = input("Are you okay with " + thirdcontent + " as your paragraph?  (Y/N): ")
-            if thirdconfirmation == "Y":
-                thirdconfirmation = True
-                thirdelementconfirmed = True
-            elif thirdconfirmation == "N":
-                thirdcontent = input("What would you like your paragraph to say? ")
-    elif thirdelement == "H":
-        thirdelement = "heading"
-        thirdcontent = input("What would you like your sub-heading to say?  Only one line of text supported. ")
-        thirdconfirmation = False
-        while thirdconfirmation != True:
-            thirdconfirmation = input("Are you okay with " + secondcontent + " as your sub-heading?  (Y/N): ")
-            if thirdconfirmation == "Y":
-                thirdconfirmation = True
-                thirdelementconfirmed = True
-            elif thirdconfirmation == "N":
-                thirdcontent = input("What would you like your sub-heading to say? Only one line of text is supported. ")
+while x == 1:
+    elementconfirmed = False
+    while elementconfirmed != True:
+        element = input("What would you like next in your website?  A sub-heading or a paragraph? (H/P): ")
+        if element == "P":
+            element = "paragraph"
+            content = input("What would you like your paragraph to say?  Please only insert one paragraph. ")
+            confirmation = False
+            while confirmation != True:
+                confirmation = input("Are you okay with " + content + " as your paragraph?  (Y/N): ")
+                if confirmation == "Y":
+                    confirmation = True
+                    elementconfirmed = True
+                    finalcode = finalcode + ("<p>" + content + "</p>\n")
+                    print("Here's your code so far:\n" + finalcode)
+                    codeend = input("Would you like to continue making your webpage?  (Y/N) ")
+                    if codeend == "N":
+                        x = 0
+                    elif codeend == "n":
+                        x = 0
+                elif confirmation == "N":
+                    content = input("What would you like your paragraph to say? ")
+        elif element == "H":
+            element = "heading"
+            content = input("What would you like your sub-heading to say?  Only one line of text supported. ")
+            confirmation = False
+            while confirmation != True:
+                confirmation = input("Are you okay with " + content + " as your sub-heading?  (Y/N): ")
+                if confirmation == "Y":
+                    confirmation = True
+                    elementconfirmed = True
+                    finalcode = finalcode + ("<h2>" + content + "</h2>\n")
+                    print("Here's your code so far:\n" + finalcode)
+                    codeend = input("Would you like to continue making your webpage?  (Y/N) ")
+                    if codeend == "N":
+                        x = 0
+                    elif codeend == "n":
+                        x = 0
+                elif confirmation == "N":
+                    content = input("What would you like your sub-heading to say? Only one line of text is supported. ")
 
-
-
-#Printing the final code
-print("<h1>" + heading + "</h1>")
-if secondelement == "paragraph":
-    print("<p>" + secondcontent + "</p>")
-elif secondelement == "heading":
-    print("<h2>" + secondcontent + "</h2>")
-
-if thirdelement == "paragraph":
-    print("<p>" + secondcontent + "</p>")
-elif thirdelement == "heading":
-    print("<h2>" + secondcontent + "</h2>")
+pyperclip.copy(finalcode)
+print("Your code should have copied automatically.  If it did not, please copy it manually below:")
+print(finalcode)
