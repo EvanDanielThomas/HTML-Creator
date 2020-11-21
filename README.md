@@ -7,6 +7,7 @@ Please credit and link back to this repository if you use this in one of your pr
 👾Features👾
 - Creates HTML code with one main heading, and unlimited amount of subheadings & paragraphs.
 - User can change the last piece of text they put in if they're unnhappy with it.
+- Write the code to a new HTML file (WIP)
 - ... ***crickets***
 
 
