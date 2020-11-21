@@ -12,11 +12,10 @@ Please credit and link back to this repository if you use this in one of your pr
 
 
 ✨Bugs✨
-- ~~Program repeats itself after first creation, second time it works as normal.~~ I'm a clown and I didn't realize the code is literally pasted there twice 🤦🏾‍♂️
-- Program copies a blank message to clipboard, user needs to copy/paste manually
+- Program copies a blank message to clipboard, user needs to copy/paste manually (can be solved by implementing writing to file)
 
 💫Goals💫
 - Introduce numbered and bulleted lists
 - Heading & body
 - Going back to previous lines to edit after confirming them
-- .exe
+- Covert .py to .exe to you shouldn't have to have python installed for this to work. (Still trying to figure this part out 🥴)
