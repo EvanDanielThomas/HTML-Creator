@@ -17,4 +17,5 @@ Please credit and link back to this repository if you use this in one of your pr
 
 💫Goals💫
 - Going back to previous lines to edit after confirming them
+- Implement the use of the PySimpleGUI module to input instead of the terminal for easier use.
 - Covert .py to .exe to you shouldn't have to have python installed for this to work. (Still trying to figure this part out 🥴)
